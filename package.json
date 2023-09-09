@@ -6,7 +6,9 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start": "npm run build && node build/index.js",
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "deploy": "npx vercel",
+    "deploy:prod": "npx vercel --prod"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +27,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "rimraf": "^5.0.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vercel": "^32.2.0"
   }
 }
