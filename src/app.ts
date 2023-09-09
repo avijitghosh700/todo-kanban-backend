@@ -24,6 +24,4 @@ app.use((_req: Request, _res: Response, next: NextFunction) => {
 app.use("/api/task", taskRoutes(app, express));
 // END
 
-app.listen(process.env.PORT || 3001, () => {
-  console.log(`Listening to port: ${process.env.PORT}`);
-});
+export default app;
