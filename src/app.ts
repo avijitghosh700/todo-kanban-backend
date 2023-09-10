@@ -20,6 +20,12 @@ app.use((_req: Request, _res: Response, next: NextFunction) => {
   next();
 });
 
+app.get("/", (_req: Request, res: Response) => {
+  res.json({
+    message: "Welcome to the Task Manager API 🙂",
+  });
+});
+
 // Route groups
 app.use("/api/task", taskRoutes(app, express));
 // END
