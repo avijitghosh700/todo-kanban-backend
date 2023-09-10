@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 mongoose.set("strictQuery", false);
 
 const connectDB = () => {
-  return mongoose.connect(process.env.DB_HOME as string, (error) => {
+  return mongoose.connect(process.env.MONGODB_URI as string, (error) => {
     if (!error) console.log("Connected");
     else console.log(error);
   });
